@@ -128,6 +128,6 @@ PR title "[week01-01] Two Sum - Alice"
 |--------|-------------------------------------|
 | Yourim | [@yourim](https://github.com/SweetSpicyya) |
 | Rachel | [@rachel](https://github.com/rachelcylee)   |
-| Angela | [@angela]((https://github.com/YOONSEO99))   |
+| Angela | [@angela](https://github.com/YOONSEO99)   |
 
 ---
