@@ -113,7 +113,7 @@ touch ./week01-01-two-sum/alice.py
 # Commit and push
 git add .
 git commit -m "[week01-01] Two Sum - Alice"
-git push origin alice/two-sum
+git push origin alice
 
 # Open a PR on GitHub
 create PR on GitHub
