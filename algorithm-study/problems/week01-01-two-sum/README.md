@@ -24,3 +24,10 @@ Get indices of the two numbers to add up to target number
 - My way: Substract the current element from the target and find the same value as the difference in the remaining part of the array.
 - Cons: Since it has double loops, in the worst case it takes more time and might fail the time test.
 - Better way: Using a map minimizes the time for looping. By inserting elements one by one, we prevent the same element from being used twice.
+
+### Angela
+
+- Approach: Search for two numbers that add up to the target by comparing each element with the others.
+- My way: I first tried a brute force approach using double loops to check every possible pair in the array.
+- Cons : The $O(n^2)$ time complexity was too slow for large inputs, resulting in a Time Limit Exceeded (TLE) error.
+- Better way : Switched to a Hash Map approach. By storing {value : index}, I can find the required complement($target - element$) in $O(1)$ time with a single pass, achieving $O(n)$ complexity.
