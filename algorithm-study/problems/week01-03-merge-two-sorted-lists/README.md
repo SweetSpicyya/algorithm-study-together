@@ -6,7 +6,7 @@
 
 ## Problem Summary
 
-Merge two linked list into one single linked list.
+Merge two linked lists into one single linked list.
 
 ## Approaches & Discussion
 
