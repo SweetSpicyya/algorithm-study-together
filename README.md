@@ -1,14 +1,13 @@
 # 📚 Algorithm Study Group
 
 A collaborative repository for our weekly algorithm study group.  
-We follow the **[Grind 75](https://www.techinterviewhandbook.org/grind75/?weeks=6&hours=6&difficulty=Easy&difficulty=Medium&order=all_rounded&mode=preferences&grouping=weeks)** problem list (6 weeks · Easy + Medium · All Rounded).
+We follow the **[Grind 75](https://www.techinterviewhandbook.org/grind75/?weeks=6&hours=5&difficulty=Easy&difficulty=Medium&order=all_rounded&mode=preferences&grouping=weeks)** problem list (6 weeks · Easy + Medium · All Rounded).
 
 ---
 
 ## 📅 Schedule
 
-- **Frequency:** 4 times per week
-- **Problems:** all problems assigned to that week
+- **Frequency:** 4 problems per week
 - **Problem source:** Grind 75 — worked through in order, week by week
 
 ---
@@ -83,8 +82,8 @@ Name your solution file after yourself, using your preferred language extension.
 
 ## 🗓️ Grind 75 — Weekly Problem List
 
-> Study 4 times per week and works through all problems assigned to that week.
-> Full list: [techinterviewhandbook.org/grind75](https://www.techinterviewhandbook.org/grind75/?weeks=6&hours=6&difficulty=Easy&difficulty=Medium&order=all_rounded&mode=preferences&grouping=weeks)
+> Study 4 problems per week.
+> Full list: [techinterviewhandbook.org/grind75](https://www.techinterviewhandbook.org/grind75/?weeks=6&hours=5&difficulty=Easy&difficulty=Medium&order=all_rounded&mode=preferences&grouping=weeks)
 
 | Week | Problems |
 |------|----------|
@@ -113,7 +112,7 @@ touch ./week01-01-two-sum/alice.py
 # Commit and push
 git add .
 git commit -m "[week01-01] Two Sum - Alice"
-git push origin alice/two-sum
+git push origin alice
 
 # Open a PR on GitHub
 create PR on GitHub
@@ -128,5 +127,6 @@ PR title "[week01-01] Two Sum - Alice"
 |--------|-------------------------------------|
 | Yourim | [@yourim](https://github.com/SweetSpicyya) |
 | Rachel | [@rachel](https://github.com/rachelcylee)   |
+| Angela | [@angela](https://github.com/YOONSEO99)   |
 
 ---
