@@ -31,3 +31,9 @@ Determine if the given string is a palindrome.
 - **Approach**: Use two pointers starting from both ends to compare alphanumeric characters and determine if the string is a palindrome.
 - **My way**: I converted the string to lowercase and used a regular expression to extract only aphanumeric characters. Then I iterated through the array, comparing elements from both ends using their indices.
 - **Better way**: Compare the original filtered string with its reversed version.
+
+### Angela
+
+- **Approach**: Remove non-alphanumeric characters and convert uppercase characters to lowercase. And using two-pointers called right and left, compare each value which pointed each pointers. If they are not the same, break the loop and return False. 
+- **My way**: At first, check whether the string 's' includes non-alphanumeric characters and save only alphanumeric characters to a new string 'str1'. Convert all characters in 'str1' to lowercase. Using While-loop with two-pointers, compare each value which pointed by pointers. If the values are not the same, set the result value to 'False' and break the loop. The time complexity is O(n).
+- **Better way**: Because we can check whether the string 's' includes non-alphanumeric characters and compare each value at the same time, we can merge two loops to reduce the code and execution time. (135ms -> 14ms)
