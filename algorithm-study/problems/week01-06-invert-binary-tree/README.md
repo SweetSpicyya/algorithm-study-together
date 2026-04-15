@@ -5,7 +5,7 @@
 **Topic:** Tree, Depth-First Search, Breadth-First Search, Binary Tree
 
 ## Problem Summary
-Invert the tree
+Invert the binary tree, and return its root.
 
 ## Approaches & Discussion
 ### Yourim
@@ -18,3 +18,11 @@ Invert the tree
   This ensure that every single node in the tree is visited and inverted.
   Finally, once the traversal is complete, I return the original root which now points to the fully inverted tree. 
   The time complexity for this approach is O(N) and the space complexity id O(N) in the worst case due to the queue.
+
+
+## Approaches & Discussion
+### Rachel
+
+- **Approach**: Level-order Traversal and Child Swapping
+- **My way**: Dividing the tree into levels based on powers of 2 and reversing each segment. However this only works for perfect binary tree. If trees have many null nodes, converting to an array is inefficient in terms of memory.
+- **Better way**: Swap the left and right children of each node and using recursion for repetitive swaping with each node's children
