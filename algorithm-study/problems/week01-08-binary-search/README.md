@@ -21,3 +21,4 @@ Otherwise, the target is lower than middle elements, so I move the right boundar
 I repeat this until the target is found or left exceeds right, meaning the target doesn't exist in the array,
 so I return -1.
 
+
