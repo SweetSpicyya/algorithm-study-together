@@ -4,17 +4,17 @@
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
-  if (s.length !== t.length) return false;
-  const map = {};
-
-  for (let char of s) {
-    map[char] = (map[char] || 0) + 1; // (map[char] || 0) falsy -> defaluts 0
-  }
-  for (let char of t) {
-    if (!map[char]) {
-      return false;
+    if (s.length !== t.length) return false;
+    const map = {};
+  
+    for (let char of s) {
+      map[char] = (map[char] || 0) + 1; // (map[char] || 0) falsy -> defaluts 0
     }
-    map[char]--;
-  }
-  return true;
-};
+    for (let char of t) {
+      if (!map[char]) {
+        return false;
+      }
+      map[char]--;
+    }
+    return true;
+  };
