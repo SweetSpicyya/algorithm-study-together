@@ -48,7 +48,7 @@ and shares the same color as the starting pixel.
   Instead, we're just managing oru own queue in the heap.
   The time complexity stays the same at O(MXN), but it's way more stable for large inputs.
 
-  # {733}. {Flood Fill}
+# {733}. {Flood Fill}
 
 **Link:** https://leetcode.com/problems/flood-fill/description/
 **Difficulty:** Easy
@@ -63,4 +63,4 @@ Fill adjacent pixels with the same color
 ### Rachel
 
 - **My way**: Check if the adgacent pixels have the same value and then check their neighbors before changing the color
-- **Better answer**: The pronlem asks us to find all pixels that are 4-directionally connected to the starting pixel and have the same initial color. First, store the color of the starting pixel image[sr][sc] as the target color. If the target color is already the same as the new color, return the image immediately to avoid an infinite loop. Use Depth-First Search to visit each neighbor. For each pixel, check if it's within the grid boundaries and matches the target color. If it matches, update it to the new color and repeart the process for its neighbors.
+- **Better answer**: The pronlem asks us to find all pixels that are 4-directionally connected to the starting pixel and have the same initial color. First, store the color of the starting pixel image[sr][sc] as the target color. If the target color is already the same as the new color, return the image immediately to avoid an infinite loop. U
