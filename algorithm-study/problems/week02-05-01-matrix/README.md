@@ -5,7 +5,16 @@
 **Topic:** Principal, Array, Dynamic Programming, Breadth-First Search, Matrix
 
 ## Problem Summary
-Get the distance of the nearest 0 for each cell.
+
+Find the distance of the nearest 0 for each cell
+
+## Approaches & Discussion
+
+### Rachel
+
+- **Brute-force / Initial Approach**: I initially approached the problem by setting 0 for the cells that is 0, and then searching 4 directions of the 1 while finding 0.
+- **Optimization**: Instead of calculating the distance for each 1 individualy, I optimized the solution by using a Multi-source Breadth-First Search. By initiating the BFS from 0, it can propagate the distance incrementally. I initialized all 1s as Infinity to track unvisited cells.
+
 
 ## Approaches & Discussion
 ### Yourim
@@ -46,4 +55,17 @@ Get the distance of the nearest 0 for each cell.
   so we don't need separate result array. And at the end, the matrix holds all the distances. So we just return it.
 
 </details>
+
+
+## Problem Summary
+Return the distance of the nearest 0 for each cell
+
+## Approaches & Discussion
+### Angela
+
+- **So the problem is asking me to** return the distance of the nearest 0 for each cell.
+- **The brute force way could be** to traverse every cell and save the distance **which runs in** O(m^2n^2)(m squared times n squared),**but this is wasteful since** this approach repeatedly traverses the same cells.
+- **We can optimize this by** using BFS, **reducing it to** O(mn).
+- **My approach is to** use BFS to traverse every cell and calculate the distance of the nearest 0 iteratively. The first step is to add all 0 cells to the queue simultaneously and start BFS from all 0 cells at once. While in the queue, after popping from the queue and traverses current cell's neighbor cells. Each neighboring cell's distance is updated as current distance+1. Lastly return the distance array.
+- **This runs in** O(mn) **time complexity** because this approach traverses all the cells in the mn matrix and O(mn) **space complexity since** the result array can grow up to the length of the matrix
 
