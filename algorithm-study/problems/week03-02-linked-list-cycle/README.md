@@ -17,3 +17,11 @@ Determine if the given linked list has a cycle in it
 - **We can optimize this by** using hash map which runs in O(n).
 - **My approach is to** make hash map to check whether if the node already visited before. Before traverse the nodes, if the head is None, return False. While traversing the head, if the current node is already in the visited hashmap return True, otherwise save it as key and True as value to visited and move to next node.
 - **This runs in** O(n) time complexity because this approach traverses every node in the linkedlist and O(n) space complexity since the hashmap can hold up to n nodes
+
+
+## Approaches & Discussion
+### Rachel
+
+- **Brute-force / Initial Approach**: I initially approached the problem by traversing the linked list and storing each visited node in a Set. At each step, I check if the current node already exists in the Set.
+- **Optimization**: Instead of using a Set to track visited nodes, I applied Floyd's Cycle Detection algorithm using two pointers. If a cycle exists, fast pointer will eventually lap slow pointer and they will meet at the same node. If there is no cycle, fast will reach null first.
+- **Complexity Analysis**: Time: O(n), Space: O(n) - Each node visited once, but all nodes stored in a Set.
