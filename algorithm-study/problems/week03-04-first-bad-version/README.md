@@ -1,4 +1,4 @@
-# {278}. {First Bas Version}
+# {278}. {First Bad Version}
 
 **Link:** https://leetcode.com/problems/first-bad-version
 **Difficulty:** Easy
