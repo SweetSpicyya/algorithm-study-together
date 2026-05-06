@@ -20,3 +20,14 @@ The important thing to highlight here is the amortized time complexity. Each ele
 The naive alternative would be to re-sort the stack on every push or pop, but that's O(n) per operation.
 </details>
 
+
+## Approaches & Discussion
+
+### Rachel
+
+- **Brute-force / Initial Approach**: I initially approached the problem by transferring all elements from stack1 to stack2 on every pop and peek call. Pushing all elements form stack1 into stack2 reverses the order, making the first element accessible from the top of the stack2. However, this caused a bug, if pop was called after elements were already in stack2, transferring stack1 again would mix the order.
+- **Optimization**: The fix was to only transfer from stack1 to stack2 when stack2 is empty. This way, leftover elements in stack2 are consunmed first before refilling from stack1.
+- **Complexity Analysis**:
+  push - Time: O(1), Space: O(n)
+  pop/peek - Time: worst case O(n) amortized O(1), Space: O(1)
+  empty - Time: O(1), Space: O(1), Space: O(1)
