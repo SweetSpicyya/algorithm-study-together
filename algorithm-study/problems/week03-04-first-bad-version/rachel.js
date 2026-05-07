@@ -22,7 +22,9 @@ var solution = function (isBadVersion) {
     let right = n;
 
     while (left < right) {
+      //finish when left === right
       let mid = Math.floor((left + right) / 2);
+
       if (isBadVersion(mid)) {
         right = mid;
       } else {
