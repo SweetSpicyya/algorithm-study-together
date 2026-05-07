@@ -7,7 +7,7 @@
 **Topic:** Hash Table, String, Counting
 
 ## Problem Summary
-Find out the first bad one, which causes all the following ones to be bed.
+Determine whether the ransomNote is contructed by using the letters from magazine once
 
 ## Approaches & Discussion
 ### Angela
