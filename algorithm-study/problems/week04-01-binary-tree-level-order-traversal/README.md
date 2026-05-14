@@ -1,6 +1,7 @@
 # {102}. {Binary Tree Level Order Traversal}
 
 **Link:** https://leetcode.com/problems/binary-tree-level-order-traversal
+
 **Difficulty:** Medium
 **Topic:** Tree, Breadth-First Search, Binary Tree
 
@@ -8,7 +9,6 @@
 
 Return the level order traversal of its nodes' values.
 
-## Approaches & Discussion
 
 ## Approaches & Discussion
 ### Yourim
@@ -22,3 +22,11 @@ But if I stop here, this won't actually return the output level by level — bec
 So I need a way to know when one level ends and the next begins. And the key insight is — right before I start processing a level, the queue contains exactly the nodes of that level and nothing else. So if I snapshot len(queue) at that moment, that count tells me exactly how many nodes belong to this level. Then I iterate that many times, collect those values, and anything I enqueue during that loop automatically belongs to the next level.
 Now we're capturing nodes level by level.
 For complexity — time is O(n) where n is the number of nodes, since we visit every node exactly once. Space is also O(n) because at peak the queue holds all the nodes at the widest level, which in the worst case is n/2 — still O(n).
+
+
+## Approaches & Discussion
+### Angela
+
+- **This problem is asking me to** return the level order traversal of its node's value.
+- **My approach is to** use queue to traverse with BFS. Group nodes at the same level into a level array. Next, pop nodes from the queue and save to level array and if node.left or node.right exist, append to queue. Lastly return result.
+- **This runs in** O(n) time complexity because this approach iterates over every node once to save level array to result array and O(n) space complexity since the result array can hold up to n nodes
