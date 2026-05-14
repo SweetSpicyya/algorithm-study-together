@@ -30,4 +30,3 @@ For complexity — time is O(n) where n is the number of nodes, since we visit e
 - **This problem is asking me to** return the level order traversal of its node's value.
 - **My approach is to** use queue to traverse with BFS. Group nodes at the same level into a level array. Next, pop nodes from the queue and save to level array and if node.left or node.right exist, append to queue. Lastly return result.
 - **This runs in** O(n) time complexity because this approach iterates over every node once to save level array to result array and O(n) space complexity since the result array can hold up to n nodes
->>>>>>> 35af0c8 ([week04-01] Binary Tree Level Order Traversal - Angela)
