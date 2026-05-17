@@ -14,7 +14,6 @@ var lengthOfLongestSubstring = function (s) {
     if (map[curr] >= start) {
       start = map[curr] + 1;
     }
-
     map[curr] = end;
     max = Math.max(max, end - start + 1);
   }

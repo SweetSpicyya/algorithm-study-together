@@ -5,9 +5,8 @@
 **Topic:** Array, Two Pointers, Sorting
 
 ## Problem Summary
-Find all triplets whose sum is 0 from the given integer array nums
 
-## Approaches & Discussion
+Find all triplets whose sum is 0 from the given integer array nums
 
 ## Approaches & Discussion
 ### Yourim
@@ -30,3 +29,13 @@ Time is O(n²) — O(n log n) for the sort, plus O(n²) for the two-pointer pass
 - **We can optimize this by** using sorting and two-pointer, reducing it to O(n^2).
 - **My approach is to** sort nums and iterate over nums with fixed index and setting two pointers as index+1, length of nums -1. And to avoid duplication, if the current index or pointer has the same value as the previous one, skip it. Next, if total sum with nums[index], nums[left], nums[right] is 0, append to result array or if total sum is less than 0, move the left pointer to right otherwise move the right pointer to left. Lastly return the result array.
 - **This runs in** O(n^2) time complexity because this approach iterates all possible triplets with fixed index and O(n) space complexity since the result array can hold up to O(n) triplets.
+
+
+## Approaches & Discussion
+### Rachel
+
+- **Brute-force / Initial Approach**: I approached this problem by sorting the array first, then fixing one element i and using two pointers left and right to find the remaining twe elements. Since the array is sorted, if the sum is too small I move left pointer to right, and if the sum is too large i move right to left. When the sum equals zero, I store the triplet.
+- **Optimization**: The main challenge after getting the basic logic right was handling duplicate triplets. I added two layers of dupicate skipping. First, if nums[i] is the same as nums[i-1], I skip that i entirely with continue to avoid starting a search from the same value twice. Second, after storing a valid triplet, I skip over any consecutive duplicate values at left and right before moving the pointers, to avoid pushing the same triplet again.
+- **Complexity Analysis**:
+  Time: O(n²) - outer for loop is O(n), inner while loop is O(n), sorting is O(n log n) but dominated by O(n²)
+  Space: O(n) - sorting takes O(log n) space, result array takes O(n) in the worst case
