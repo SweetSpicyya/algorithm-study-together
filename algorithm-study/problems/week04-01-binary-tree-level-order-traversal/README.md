@@ -30,3 +30,11 @@ For complexity — time is O(n) where n is the number of nodes, since we visit e
 - **This problem is asking me to** return the level order traversal of its node's value.
 - **My approach is to** use queue to traverse with BFS. Group nodes at the same level into a level array. Next, pop nodes from the queue and save to level array and if node.left or node.right exist, append to queue. Lastly return result.
 - **This runs in** O(n) time complexity because this approach iterates over every node once to save level array to result array and O(n) space complexity since the result array can hold up to n nodes
+
+
+## Approaches & Discussion
+### Rachel
+
+- **Problem Summary**: Return the values of a binary tree level by level, from left to right, grouped into separate arrays.
+- **Approach**: I approached this problem using BFS with a queue. I'll push the root into a queue. While the queue isn't empty, I'll save the current queue length as size to know how many nodes belong to the current level. I'll iterate size times, popping each node, collecting its value, and pushing its children into the queue. After each level, I push the collected values into result.
+- **Evaluate**: Time complexity is O(n) since every node is visited exactly once. Space complexity is O(n) because the queue holds at most one full level of nodes, which in the worst case is n/2 nodes in ta complete binary tree
