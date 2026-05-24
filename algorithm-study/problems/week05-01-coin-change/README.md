@@ -21,6 +21,7 @@ Finally, it returns dp[amount] if the value was updated, or -1 if the target amo
   Space: O(n) dp array of size amount+1
 
 ### Angela
+
 - **So this problem is asking me to** find the fewest number of coins that make up given amount.
 - **I will approach this by** using HashMap and BFS by using queue.
 - **Now, let me code this up.**
