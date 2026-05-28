@@ -1,12 +1,24 @@
 # {70}. {Climbing Stairs}
 
-<<<<<<< HEAD
-**Link:** https://leetcode.com/problems/climbing-stairs/
+**Link:** https://leetcode.com/problems/climbing-stairs
+
 **Difficulty:** Easy
 **Topic:** Math, Dynamic Programming, Memoization
 
-## Approaches & Discussion
+## Problem Summary
+Get distinct ways can you climb to the top
 
+## Approaches & Discussion
+### Yourim
+To solve this problem, I used Dynamic Programming.
+The core idea is that to reach the n-th step, you can only come from either the (n-1)-th step or the (n-2)-th step. 
+Therefore, the total number of ways to reach step n is the sum of the ways to reach step n-1 and step n-2. This is exactly like the Fibonacci sequence.
+First, I handled the base cases. if n is 1 or 2, the answer is simply 1 or 2.
+Then, I used a loop to build up the solution from step 3 all the way to n, storing the values in an array. 
+Finally, I returned the value at index n.
+Time complexity is O(n).
+
+## Approaches & Discussion
 ### Rachel
 
 - **Understand**: We're climbing a staircase with n steps, and we can take either 1 or 2 steps at a time. We need to count the total number of distinct ways to reach the top.
@@ -26,4 +38,4 @@
 - I will approach this by using a recursive Fibonacci function with a **HashMap to store the calculated values** and avoid recalculation. Now, let me code this up.
 - My approach is to initialize a HashMap called `memo`. Inside the Fibonacci function, if the current `num` is already in `memo`, it means we already calculated it, so we can just return that value. If `num` is 1, return 1, and if `num` is 2, return 2. Otherwise, we calculate the answer recursively, store it in `memo`, and then return it.
 - This runs in **$O(N)$ time complexity** because thanks to the `memo` map, we **visit each stair level at most once**. The **space complexity is also $O(N)$** since the `memo` map can hold up to $N$ results in the worst case.
->>>>>>> ebf7e62 ([week05-03] Climbing Stairs - Angela)
+
