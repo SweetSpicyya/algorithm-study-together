@@ -25,3 +25,14 @@ Ultimately, this optimizes the time complexity to O(n) while maintaining an O(1)
 - **Evaluate**:
   Time: O(n) - three separate linear passes through the array
   Space: O(n) - prefix and suffix arrays each of size n
+
+## Approaches & Discussion
+### Angela
+
+- So, this problem is asking me to make an array `answer` such that `answer[i]` is equal to the product of all the elements of `nums` except `nums[i]`.
+- Since we need to process every element in the array at least once, an **$O(N)$ time complexity is already optimal.**
+- I will approach this by using **prefix and suffix products**. Now, let me code this up.
+- My approach is to initialize `left`, `right`, and `output` arrays **to 1**. Next, I will **go through the array forward and backward** to calculate the left side and the right side. After that, I will calculate the final result by **multiplying the left and right products**.
+- Let's say **$N$** represents the number of elements in the `nums` array.
+This runs in **$O(N)$ time complexity** because this approach iterates over all elements once, and **$O(N)$ space complexity** since the `left` and `right` arrays can grow up to **the size of the array**.
+>>>>>>> 947cec4 ([week05-02] Product of array except self - Angela)
