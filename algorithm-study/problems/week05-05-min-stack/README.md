@@ -1,8 +1,16 @@
 # {155}. {Min Stack}
 
-**Link:** https://leetcode.com/problems/min-stack/
+**Link:** https://leetcode.com/problems/min-stack
 **Difficulty:** Medium
 **Topic:** Stack, Design
+
+## Approaches & Discussion
+### Yourim
+The main challenge is recovering the previous minimum value when the current minimum is popped from the stack. 
+To solve this, we can use two synchronized stacks. A main stack for actual data, and a min_stack to track the minimum history. 
+When pushing a value, we append it to the main stack and simultaneously push the smaller value between the new input and the current minimum into the min_stack. 
+When popping, we must remove elements from both stacks together to maintain the exact same history and length. 
+As a result, all operations—including getMin—can access the top elements directly, achieving a time complexity of O(1) and a space complexity of O(n).
 
 ## Approaches & Discussion
 
@@ -14,3 +22,11 @@
 - **Evaluate**:
   Time: O(1) - push, pop, top, and getMin each do a constant number of operations.
   Space: O(n) - minStack stores one value per push, same size as the main stack.
+
+## Approaches & Discussion
+### Angela
+
+- So, this problem is asking me to design a stack that supports `push`, `pop`, `top`, and retrieving the minimum element, **all in $O(1)$ constant time**.
+- I will approach this by using a **tuple** to keep track of the current minimum value at each state. Now, let me code this up.
+- My approach is to initialize an empty array for the stack. In the `push` function, **if the stack is empty**, it means the current value is also the minimum, so I append a tuple `(val, val)`. Otherwise, I compare the new value with the stored minimum from the top of the stack, and append a new tuple with the updated minimum. **For the `pop` function**, I simply remove the tuple at the top of the stack. **For the `top` function**, I look at the top tuple and return the actual value. **Lastly, for the `getMin` function**, I also look at the top tuple, but return the stored minimum value instead.
+- Every function runs in **$O(1)$ time complexity** because we only perform basic array operations without any loops. The **space complexity is $O(N)$** since the stack array will hold up to the number of elements we push into it.
