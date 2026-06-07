@@ -1,4 +1,4 @@
-# {98}. {Validate Binary Search Tree}
+# {200}. {Number of Islands}
 
 **Link:** https://leetcode.com/problems/number-of-islands
 **Difficulty:** Medium
