@@ -1,4 +1,4 @@
-# {33}. {Search in Rotated Sorted Array}
+# {39}. {Combination Sum}
 
 **Link:** https://leetcode.com/problems/combination-sum/
 **Difficulty:** Medium
